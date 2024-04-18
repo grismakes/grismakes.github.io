@@ -1,11 +1,18 @@
+:root {
+	--main: rgb(222, 222, 222);
+	--dim: rgb();
+	--bg: rgb(20, 24, 22)
+}
+
 * {
 	border: 0;
 	margin: 0;
 	padding: 0;
+	color: var(--main);
 }
 
 html {
-	background-color: #202426;
+	background-color: var(--bg);
 	color: white;
 	font-family: sans-serif;
 	font-size: 1.5rem;
@@ -20,10 +27,62 @@ body {
 	align-items: center;
 }
 
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 48px;
+	background-color: var(--bg);
+}
+
+nav {
+	width: 100%;
+	height: 100%;
+}
+
+nav > ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100%;
+}
+
+a {
+}
+
+main {
+}
+
+.summary {
+	padding: 20px;
+	border: ridge white 0.5rem;
+}
+
+.gallery {
+	height: 100vh;
+	margin: 128px 0 auto 0;
+}
+
 p {
 	margin: 8px;
 }
 
 h2 {
 	margin: 20px 0 0 0;
+}
+
+.img-container {
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	background-color: black;
+	padding: 48px;
+	margin: 20px;
+}
+
+img {
+	object-fit: contain;
+	aspect-ratio: unset;
+	max-height: 512px;
 }
